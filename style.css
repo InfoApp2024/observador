@@ -1,276 +1,126 @@
-/* Estilos base optimizados para impresión */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  font-family: 'Roboto', sans-serif;
-  background-color: #f5f7fa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 40px;
+  background-color: #f9f9f9;
   color: #333;
-  line-height: 1.6;
-  padding: 20px;
-  font-size: 12pt; /* Tamaño base para impresión */
 }
 
-.container {
-  max-width: 1000px;
-  margin: 0 auto;
-  background: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  padding: 40px; /* Más padding para evitar apelmazamiento */
-}
-
-/* Encabezado */
 .header {
-  border-bottom: 3px solid #004080;
-  margin-bottom: 40px; /* Más espacio después del encabezado */
-  padding-bottom: 20px;
-}
-
-.header-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 30px; /* Más espacio entre elementos */
+  border-bottom: 4px solid #004080;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
 }
 
-.logo img {
-  height: 100px; /* Logo más grande */
-  width: auto;
+.header img {
+  height: 90px;
 }
 
-.titulo {
+.header h1 {
   text-align: center;
   flex-grow: 1;
-}
-
-.titulo h1 {
-  font-family: 'Lora', serif;
-  font-size: 28pt; /* Tamaño más grande */
+  font-size: 26px;
   color: #004080;
-  font-weight: 600;
-  margin-bottom: 10px;
+  margin: 0;
 }
 
-.subtitulo {
-  font-family: 'Roboto', sans-serif;
-  font-size: 16pt;
-  color: #666;
+.info {
+  font-size: 16px;
+  margin-bottom: 30px;
+  line-height: 1.6;
 }
 
-.folio {
-  background-color: #f8f9fa;
-  padding: 10px 20px;
-  border-radius: 5px;
-  border-left: 4px solid #004080;
-}
-
-.folio-numero {
+.info strong, .label {
+  color: #000;
   font-weight: bold;
-  color: #004080;
-  font-size: 14pt;
-}
-
-/* Secciones con más espacio */
-.seccion {
-  margin-bottom: 40px; /* Más espacio entre secciones */
-}
-
-h2 {
-  font-family: 'Lora', serif;
-  font-size: 18pt;
-  color: #004080;
-  margin-bottom: 20px; /* Más espacio después del título */
-  padding-bottom: 10px;
-  border-bottom: 1px solid #dee2e6;
-}
-
-/* Tablas con mejor espaciado */
-.tabla-container {
-  margin-bottom: 20px;
 }
 
 table {
   width: 100%;
-  border-collapse: separate; /* Cambiado para mejor espaciado */
-  border-spacing: 0;
-  margin-bottom: 20px;
-  background-color: #fff;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 16px;
 }
 
-.datos-tabla, .situacion-tabla, .accion-tabla {
-  border: 2px solid #dee2e6; /* Borde más grueso */
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+th, td {
+  border: 1px solid #bbb;
+  padding: 12px;
+  text-align: left;
 }
 
-td {
-  padding: 15px 20px; /* Más padding dentro de las celdas */
-  border: 1px solid #dee2e6;
-}
-
-.etiqueta {
-  background-color: #f8f9fa;
-  width: 25%;
-  font-weight: 500;
-  color: #333;
-  vertical-align: top;
-  font-size: 12pt;
-}
-
-.valor {
-  width: 25%;
-  font-size: 12pt;
-}
-
-.valor-descripcion {
-  padding: 20px; /* Más espaciado para texto descriptivo */
-  line-height: 1.8; /* Mayor altura de línea */
-  font-size: 12pt;
-}
-
-td[colspan="3"] {
-  width: auto;
-}
-
-/* Elementos especiales */
-.codigo-falta {
+th {
   background-color: #004080;
   color: white;
-  padding: 6px 15px;
-  border-radius: 4px;
-  font-weight: bold;
-  display: inline-block;
-  font-size: 13pt;
+  font-size: 17px;
 }
 
-.tipo-falta {
-  background-color: #ffc107;
-  color: #212529;
-  padding: 6px 15px;
-  border-radius: 4px;
-  font-weight: bold;
-  display: inline-block;
-  font-size: 13pt;
+tr:nth-child(even) {
+  background-color: #f0f8ff;
 }
 
-.telefono:before {
-  content: "📞 ";
+tr:nth-child(odd) {
+  background-color: #ffffff;
 }
 
-/* Secciones específicas */
-.situacion-tabla, .accion-tabla {
-  border-left: 4px solid #004080; /* Borde izquierdo para destacar */
-}
-
-/* Firmas con más espacio */
-.firmas-seccion {
-  margin-top: 50px; /* Más espacio antes de las firmas */
-}
-
-.firmas-contenedor {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 30px;
-  gap: 40px; /* Más espacio entre firmas */
-}
-
-.firma-bloque {
-  flex: 1;
+.footer {
+  margin-top: 50px;
+  font-size: 15px;
+  color: #555;
   text-align: center;
 }
 
-.firma-imagen {
-  height: 100px; /* Más espacio para la firma */
+.signatures {
+  margin-top: 60px;
   display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  margin-bottom: 15px;
+  justify-content: space-between;
+  font-size: 16px;
 }
 
-.firma-imagen img {
-  max-width: 150px;
-  max-height: 80px;
+.signature-block {
+  width: 45%;
+  text-align: center;
 }
 
-.firma-linea {
-  width: 100%;
-  height: 1px;
-  background-color: #000;
+.signature-line {
+  border-top: 1px solid #000;
+  margin-top: 60px;
+  padding-top: 5px;
+}
+
+.observaciones-adicionales {
+  margin-top: 40px;
+  font-size: 16px;
+}
+
+.observaciones-adicionales .label {
+  display: block;
   margin-bottom: 10px;
 }
 
-.firma-nombre {
-  font-weight: 500;
-  margin-bottom: 5px;
-  font-size: 13pt;
+.observaciones-adicionales .campo {
+  border: 1px solid #bbb;
+  background-color: #fff;
+  padding: 15px;
+  min-height: 80px;
 }
 
-.firma-cargo {
-  font-size: 12pt;
-  color: #6c757d;
-}
-
-/* Pie de página */
-footer {
-  margin-top: 60px; /* Más espacio antes del footer */
-  padding-top: 20px;
-  border-top: 1px solid #dee2e6;
+.print-button {
+  margin-top: 30px;
   text-align: center;
-  color: #6c757d;
-  font-size: 11pt;
 }
 
-.institucion {
-  font-weight: 500;
-  margin-top: 8px;
-  font-size: 12pt;
+.print-button button {
+  background-color: #004080;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
-/* Estilos para impresión */
-@media print {
-  body {
-    background-color: white;
-    padding: 0;
-  }
-  
-  .container {
-    box-shadow: none;
-    max-width: 100%;
-    padding: 20px;
-  }
-  
-  @page {
-    size: letter portrait;
-    margin: 2cm;
-  }
-}
-
-/* Estilos responsivos */
-@media (max-width: 768px) {
-  .header-content {
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  .firmas-contenedor {
-    flex-direction: column;
-    gap: 30px;
-  }
-  
-  .container {
-    padding: 20px;
-  }
-  
-  .etiqueta, .valor {
-    width: auto;
-  }
-  
-  td {
-    padding: 12px 15px;
-  }
+.print-button button:hover {
+  background-color: #003060;
 }
