@@ -5,13 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Observador del Estudiante</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="container">
     <!-- Encabezado -->
     <header class="header">
       <div class="logo">
-        <!-- Imagen del logo -->
         <img src="logo-colegio.png" alt="Logo del Colegio" />
       </div>
       <div class="titulo">
@@ -23,41 +25,55 @@
     <!-- Información del Estudiante -->
     <section class="datos-estudiante">
       <h2>Datos del Estudiante</h2>
-      <p><strong>Nombre:</strong> Mathias Suarez</p>
-      <p><strong>Tipo de Documento:</strong> Tarjeta de Identidad</p>
-      <p><strong>Número de Documento:</strong> 12345678</p>
-      <p><strong>Dirección:</strong> Barrio Las Palmas, Barranquilla</p>
+      <div class="info-grid">
+        <p><strong>Nombre:</strong> Mathias Suarez</p>
+        <p><strong>Tipo de Documento:</strong> Tarjeta de Identidad</p>
+        <p><strong>Número de Documento:</strong> 12345678</p>
+        <p><strong>Dirección:</strong> Barrio Las Palmas, Barranquilla</p>
+      </div>
     </section>
 
     <!-- Información Familiar -->
     <section class="datos-familia">
       <h2>Información de Contacto</h2>
-      <p><strong>Madre:</strong> Alexandra - 📞 3152187707</p>
-      <p><strong>Padre / Acudiente:</strong> Diego - 📞 3002148738</p>
+      <div class="contactos">
+        <p><strong>Madre:</strong> Alexandra <span class="telefono">📞 3152187707</span></p>
+        <p><strong>Padre / Acudiente:</strong> Diego <span class="telefono">📞 3002148738</span></p>
+      </div>
     </section>
 
     <!-- Situación Reportada -->
     <section class="situacion">
       <h2>Seguimiento de Faltas</h2>
-      <p><strong>Fecha:</strong> 17 de abril de 2025</p>
-      <p><strong>Código de Falta:</strong> 2</p>
-      <p><strong>Situación:</strong> Incumplir con el uso del uniforme de acuerdo con la actividad correspondiente o días asignados según el horario establecido.</p>
+      <div class="falta-info">
+        <p><strong>Fecha:</strong> 17 de abril de 2025</p>
+        <p><strong>Código de Falta:</strong> <span class="codigo-falta">2</span></p>
+        <p class="descripcion-falta"><strong>Situación:</strong> Incumplir con el uso del uniforme de acuerdo con la actividad correspondiente o días asignados según el horario establecido.</p>
+      </div>
     </section>
 
     <!-- Descargos -->
     <section class="descargos">
       <h2>Descargos</h2>
       <div class="firmas">
-        <div>
+        <div class="firma-container">
           <p><strong>Estudiante:</strong> jhjgvvh</p>
-          <img src="firma-estudiante.png" alt="Firma Estudiante" />
+          <div class="firma-img">
+            <img src="firma-estudiante.png" alt="Firma Estudiante" />
+          </div>
         </div>
-        <div>
+        <div class="firma-container">
           <p><strong>Docente:</strong> gjvhjvhbhb</p>
-          <img src="firma-docente.png" alt="Firma Docente" />
+          <div class="firma-img">
+            <img src="firma-docente.png" alt="Firma Docente" />
+          </div>
         </div>
       </div>
     </section>
+
+    <footer>
+      <p>© 2025 Institución Educativa</p>
+    </footer>
   </div>
 </body>
 </html>
