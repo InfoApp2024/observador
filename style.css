@@ -1,4 +1,4 @@
-/* Estilos base */
+/* Estilos base optimizados para impresión */
 * {
   margin: 0;
   padding: 0;
@@ -11,6 +11,7 @@ body {
   color: #333;
   line-height: 1.6;
   padding: 20px;
+  font-size: 12pt; /* Tamaño base para impresión */
 }
 
 .container {
@@ -19,24 +20,25 @@ body {
   background: #ffffff;
   border-radius: 8px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  padding: 30px;
+  padding: 40px; /* Más padding para evitar apelmazamiento */
 }
 
 /* Encabezado */
 .header {
   border-bottom: 3px solid #004080;
-  margin-bottom: 30px;
-  padding-bottom: 15px;
+  margin-bottom: 40px; /* Más espacio después del encabezado */
+  padding-bottom: 20px;
 }
 
 .header-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 30px; /* Más espacio entre elementos */
 }
 
 .logo img {
-  height: 80px;
+  height: 100px; /* Logo más grande */
   width: auto;
 }
 
@@ -47,21 +49,21 @@ body {
 
 .titulo h1 {
   font-family: 'Lora', serif;
-  font-size: 28px;
+  font-size: 28pt; /* Tamaño más grande */
   color: #004080;
   font-weight: 600;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .subtitulo {
   font-family: 'Roboto', sans-serif;
-  font-size: 16px;
+  font-size: 16pt;
   color: #666;
 }
 
 .folio {
   background-color: #f8f9fa;
-  padding: 8px 15px;
+  padding: 10px 20px;
   border-radius: 5px;
   border-left: 4px solid #004080;
 }
@@ -69,56 +71,66 @@ body {
 .folio-numero {
   font-weight: bold;
   color: #004080;
+  font-size: 14pt;
 }
 
-/* Secciones */
+/* Secciones con más espacio */
 .seccion {
-  margin-bottom: 30px;
+  margin-bottom: 40px; /* Más espacio entre secciones */
 }
 
 h2 {
   font-family: 'Lora', serif;
-  font-size: 20px;
+  font-size: 18pt;
   color: #004080;
-  margin-bottom: 15px;
-  padding-bottom: 8px;
+  margin-bottom: 20px; /* Más espacio después del título */
+  padding-bottom: 10px;
   border-bottom: 1px solid #dee2e6;
 }
 
-/* Tablas */
+/* Tablas con mejor espaciado */
+.tabla-container {
+  margin-bottom: 20px;
+}
+
 table {
   width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 15px;
+  border-collapse: separate; /* Cambiado para mejor espaciado */
+  border-spacing: 0;
+  margin-bottom: 20px;
   background-color: #fff;
 }
 
 .datos-tabla, .situacion-tabla, .accion-tabla {
-  border: 1px solid #dee2e6;
-  border-radius: 5px;
+  border: 2px solid #dee2e6; /* Borde más grueso */
+  border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
 }
 
 td {
-  padding: 12px 15px;
+  padding: 15px 20px; /* Más padding dentro de las celdas */
   border: 1px solid #dee2e6;
 }
 
 .etiqueta {
   background-color: #f8f9fa;
-  width: 22%;
+  width: 25%;
   font-weight: 500;
-  color: #495057;
+  color: #333;
   vertical-align: top;
-}
-
-.etiqueta-vertical {
-  vertical-align: middle;
+  font-size: 12pt;
 }
 
 .valor {
-  width: 28%;
+  width: 25%;
+  font-size: 12pt;
+}
+
+.valor-descripcion {
+  padding: 20px; /* Más espaciado para texto descriptivo */
+  line-height: 1.8; /* Mayor altura de línea */
+  font-size: 12pt;
 }
 
 td[colspan="3"] {
@@ -129,40 +141,42 @@ td[colspan="3"] {
 .codigo-falta {
   background-color: #004080;
   color: white;
-  padding: 5px 12px;
+  padding: 6px 15px;
   border-radius: 4px;
   font-weight: bold;
   display: inline-block;
+  font-size: 13pt;
 }
 
 .tipo-falta {
   background-color: #ffc107;
   color: #212529;
-  padding: 5px 12px;
+  padding: 6px 15px;
   border-radius: 4px;
   font-weight: bold;
   display: inline-block;
+  font-size: 13pt;
 }
 
 .telefono:before {
   content: "📞 ";
 }
 
-.descripcion-falta {
-  line-height: 1.7;
+/* Secciones específicas */
+.situacion-tabla, .accion-tabla {
+  border-left: 4px solid #004080; /* Borde izquierdo para destacar */
 }
 
-.observaciones {
-  background-color: #f8f9fa;
-  font-style: italic;
+/* Firmas con más espacio */
+.firmas-seccion {
+  margin-top: 50px; /* Más espacio antes de las firmas */
 }
 
-/* Firmas */
 .firmas-contenedor {
   display: flex;
   justify-content: space-between;
-  margin-top: 25px;
-  gap: 20px;
+  margin-top: 30px;
+  gap: 40px; /* Más espacio entre firmas */
 }
 
 .firma-bloque {
@@ -171,76 +185,92 @@ td[colspan="3"] {
 }
 
 .firma-imagen {
-  height: 80px;
+  height: 100px; /* Más espacio para la firma */
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .firma-imagen img {
   max-width: 150px;
-  max-height: 70px;
+  max-height: 80px;
 }
 
 .firma-linea {
   width: 100%;
   height: 1px;
   background-color: #000;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .firma-nombre {
   font-weight: 500;
-  margin-bottom: 3px;
+  margin-bottom: 5px;
+  font-size: 13pt;
 }
 
 .firma-cargo {
-  font-size: 14px;
+  font-size: 12pt;
   color: #6c757d;
 }
 
 /* Pie de página */
 footer {
-  margin-top: 40px;
-  padding-top: 15px;
+  margin-top: 60px; /* Más espacio antes del footer */
+  padding-top: 20px;
   border-top: 1px solid #dee2e6;
   text-align: center;
   color: #6c757d;
-  font-size: 14px;
+  font-size: 11pt;
 }
 
 .institucion {
   font-weight: 500;
-  margin-top: 5px;
+  margin-top: 8px;
+  font-size: 12pt;
+}
+
+/* Estilos para impresión */
+@media print {
+  body {
+    background-color: white;
+    padding: 0;
+  }
+  
+  .container {
+    box-shadow: none;
+    max-width: 100%;
+    padding: 20px;
+  }
+  
+  @page {
+    size: letter portrait;
+    margin: 2cm;
+  }
 }
 
 /* Estilos responsivos */
 @media (max-width: 768px) {
   .header-content {
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
   }
   
   .firmas-contenedor {
     flex-direction: column;
+    gap: 30px;
+  }
+  
+  .container {
+    padding: 20px;
   }
   
   .etiqueta, .valor {
     width: auto;
   }
   
-  table, tr, td {
-    display: block;
-  }
-  
   td {
-    text-align: left !important;
-  }
-  
-  .etiqueta {
-    border-bottom: none;
-    padding-bottom: 0;
-    font-weight: 600;
+    padding: 12px 15px;
   }
 }
