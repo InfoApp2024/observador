@@ -1,4 +1,4 @@
-/* Estilos generales */
+/* Estilos base */
 * {
   margin: 0;
   padding: 0;
@@ -6,157 +6,241 @@
 }
 
 body {
-  font-family: 'Roboto', 'Segoe UI', Tahoma, sans-serif;
-  background: #f5f7fa;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f7fa;
   color: #333;
-  padding: 20px;
   line-height: 1.6;
+  padding: 20px;
 }
 
 .container {
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
   background: #ffffff;
-  border-radius: 12px;
-  padding: 30px;
+  border-radius: 8px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 30px;
 }
 
-/* Estilos del encabezado */
+/* Encabezado */
 .header {
+  border-bottom: 3px solid #004080;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+}
+
+.header-content {
   display: flex;
   align-items: center;
-  gap: 20px;
-  border-bottom: 2px solid #e0e0e0;
-  padding-bottom: 20px;
-  margin-bottom: 30px;
+  justify-content: space-between;
 }
 
 .logo img {
-  height: 100px;
+  height: 80px;
   width: auto;
-  object-fit: contain;
+}
+
+.titulo {
+  text-align: center;
+  flex-grow: 1;
 }
 
 .titulo h1 {
-  font-size: 1.5rem;
-  color: #003366;
-  margin-bottom: 8px;
-}
-
-.titulo p {
-  font-size: 0.95rem;
-  color: #555;
-}
-
-/* Estilos de secciones */
-section {
-  margin-bottom: 30px;
-  padding-bottom: 20px;
-}
-
-section h2 {
+  font-family: 'Lora', serif;
+  font-size: 28px;
   color: #004080;
-  margin-bottom: 15px;
-  border-bottom: 1px solid #dcdcdc;
-  padding-bottom: 8px;
-  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 5px;
 }
 
-section p {
-  margin: 8px 0;
-  font-size: 1rem;
+.subtitulo {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: #666;
 }
 
-/* Sección de datos del estudiante */
-.info-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 10px;
-}
-
-/* Sección de información de contacto */
-.contactos {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.telefono {
-  font-weight: 500;
-  color: #0066cc;
-}
-
-/* Sección de faltas */
-.falta-info {
-  background-color: #f9f9f9;
-  padding: 15px;
-  border-radius: 8px;
+.folio {
+  background-color: #f8f9fa;
+  padding: 8px 15px;
+  border-radius: 5px;
   border-left: 4px solid #004080;
 }
 
+.folio-numero {
+  font-weight: bold;
+  color: #004080;
+}
+
+/* Secciones */
+.seccion {
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-family: 'Lora', serif;
+  font-size: 20px;
+  color: #004080;
+  margin-bottom: 15px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #dee2e6;
+}
+
+/* Tablas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 15px;
+  background-color: #fff;
+}
+
+.datos-tabla, .situacion-tabla, .accion-tabla {
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+td {
+  padding: 12px 15px;
+  border: 1px solid #dee2e6;
+}
+
+.etiqueta {
+  background-color: #f8f9fa;
+  width: 22%;
+  font-weight: 500;
+  color: #495057;
+  vertical-align: top;
+}
+
+.etiqueta-vertical {
+  vertical-align: middle;
+}
+
+.valor {
+  width: 28%;
+}
+
+td[colspan="3"] {
+  width: auto;
+}
+
+/* Elementos especiales */
 .codigo-falta {
   background-color: #004080;
   color: white;
-  padding: 2px 8px;
+  padding: 5px 12px;
   border-radius: 4px;
   font-weight: bold;
+  display: inline-block;
+}
+
+.tipo-falta {
+  background-color: #ffc107;
+  color: #212529;
+  padding: 5px 12px;
+  border-radius: 4px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.telefono:before {
+  content: "📞 ";
 }
 
 .descripcion-falta {
-  margin-top: 12px;
-  font-size: 1.05rem;
+  line-height: 1.7;
 }
 
-/* Sección de firmas */
-.descargos .firmas {
+.observaciones {
+  background-color: #f8f9fa;
+  font-style: italic;
+}
+
+/* Firmas */
+.firmas-contenedor {
   display: flex;
   justify-content: space-between;
-  gap: 30px;
-  margin-top: 20px;
+  margin-top: 25px;
+  gap: 20px;
 }
 
-.firma-container {
+.firma-bloque {
   flex: 1;
   text-align: center;
 }
 
-.firma-img {
-  margin-top: 10px;
-  border: 1px solid #ddd;
-  padding: 8px;
-  border-radius: 6px;
-  background-color: #f9f9f9;
-  display: inline-block;
+.firma-imagen {
+  height: 80px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin-bottom: 10px;
 }
 
-.firma-img img {
-  width: 150px;
-  height: auto;
+.firma-imagen img {
+  max-width: 150px;
+  max-height: 70px;
+}
+
+.firma-linea {
+  width: 100%;
+  height: 1px;
+  background-color: #000;
+  margin-bottom: 8px;
+}
+
+.firma-nombre {
+  font-weight: 500;
+  margin-bottom: 3px;
+}
+
+.firma-cargo {
+  font-size: 14px;
+  color: #6c757d;
 }
 
 /* Pie de página */
 footer {
-  text-align: center;
-  margin-top: 30px;
+  margin-top: 40px;
   padding-top: 15px;
-  border-top: 1px solid #e0e0e0;
-  color: #777;
-  font-size: 0.85rem;
+  border-top: 1px solid #dee2e6;
+  text-align: center;
+  color: #6c757d;
+  font-size: 14px;
 }
 
-/* Estilos responsive */
-@media (max-width: 600px) {
-  .header {
+.institucion {
+  font-weight: 500;
+  margin-top: 5px;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .header-content {
     flex-direction: column;
-    text-align: center;
+    gap: 15px;
   }
   
-  .descargos .firmas {
+  .firmas-contenedor {
     flex-direction: column;
   }
   
-  .container {
-    padding: 15px;
+  .etiqueta, .valor {
+    width: auto;
+  }
+  
+  table, tr, td {
+    display: block;
+  }
+  
+  td {
+    text-align: left !important;
+  }
+  
+  .etiqueta {
+    border-bottom: none;
+    padding-bottom: 0;
+    font-weight: 600;
   }
 }
