@@ -1,158 +1,80 @@
-/* Reset básico */
-* {
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f4f6f9;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  color: #333;
 }
 
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f4f7fb;
-  color: #2c3e50;
-  padding: 30px;
-  font-size: 16px;
-}
-
-.contenedor {
-  max-width: 960px;
+.container {
+  max-width: 900px;
   margin: auto;
+  padding: 2rem;
   background-color: #fff;
-  padding: 40px;
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
 }
 
-/* Encabezado */
-.encabezado {
-  display: flex;
-  align-items: center;
-  border-bottom: 3px solid #004080;
-  padding-bottom: 20px;
-  margin-bottom: 30px;
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
-.logo img {
-  height: 80px;
-  margin-right: 20px;
+.logo {
+  width: 120px;
+  margin-bottom: 1rem;
 }
 
-.titulo h1 {
-  font-size: 26px;
-  color: #004080;
+h1 {
+  font-size: 2rem;
+  color: #0a3d62;
 }
 
-.subtitulo {
-  font-size: 15px;
-  color: #888;
-  margin-top: 4px;
+h2 {
+  font-size: 1.5rem;
+  color: #0a3d62;
+  margin-top: 2rem;
+  border-bottom: 2px solid #0a3d62;
+  padding-bottom: 0.5rem;
 }
 
-/* Información del estudiante */
-.info-estudiante {
-  margin-bottom: 30px;
-  line-height: 1.8;
+p {
+  margin: 0.5rem 0;
 }
 
-/* Tabla */
-.tabla-contenido table {
+table {
   width: 100%;
   border-collapse: collapse;
-  margin-bottom: 30px;
+  margin-top: 1rem;
 }
 
-.tabla-contenido th, .tabla-contenido td {
-  padding: 14px;
-  border: 1px solid #d6d6d6;
-  text-align: left;
+table, th, td {
+  border: 1px solid #ccc;
+}
+
+th {
+  background-color: #0a3d62;
+  color: white;
+  padding: 0.5rem;
+}
+
+td {
+  padding: 0.5rem;
   vertical-align: top;
 }
 
-.tabla-contenido th {
-  background-color: #004080;
-  color: white;
-  font-weight: 600;
-}
-
-/* Observaciones adicionales */
-.adicionales {
-  margin-bottom: 40px;
-}
-
-.adicionales h3 {
-  color: #004080;
-  margin-bottom: 10px;
-}
-
-.campo {
-  background-color: #f9f9f9;
-  border: 1px solid #ccc;
-  padding: 15px;
-  border-radius: 6px;
-  min-height: 80px;
-}
-
-/* Firmas */
 .firmas {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 40px;
+  justify-content: space-around;
+  margin-top: 2rem;
 }
 
 .firma {
-  width: 45%;
   text-align: center;
 }
 
-.linea-firma {
-  border-top: 1px solid #555;
-  margin: 50px 0 10px;
-}
-
-/* Pie de página */
-.pie {
-  text-align: center;
-  color: #666;
-  font-size: 14px;
-  line-height: 1.6;
-  border-top: 1px solid #ccc;
-  padding-top: 20px;
-}
-
-/* Botón imprimir */
-.boton-imprimir {
-  text-align: center;
-  margin-top: 30px;
-}
-
-.boton-imprimir button {
-  background-color: #004080;
-  color: white;
-  border: none;
-  padding: 12px 30px;
-  font-size: 16px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.boton-imprimir button:hover {
-  background-color: #003060;
-}
-
-/* Responsivo para impresión */
-@media print {
-  .boton-imprimir {
-    display: none;
-  }
-
-  body {
-    background-color: white;
-    padding: 0;
-  }
-
-  .contenedor {
-    box-shadow: none;
-    border-radius: 0;
-    padding: 0;
-  }
+.firma img {
+  max-width: 150px;
+  height: auto;
+  margin-top: 0.5rem;
 }
