@@ -1,126 +1,158 @@
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 40px;
-  background-color: #f9f9f9;
-  color: #333;
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.header {
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f7fb;
+  color: #2c3e50;
+  padding: 30px;
+  font-size: 16px;
+}
+
+.contenedor {
+  max-width: 960px;
+  margin: auto;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.05);
+}
+
+/* Encabezado */
+.encabezado {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  border-bottom: 4px solid #004080;
+  border-bottom: 3px solid #004080;
   padding-bottom: 20px;
   margin-bottom: 30px;
 }
 
-.header img {
-  height: 90px;
+.logo img {
+  height: 80px;
+  margin-right: 20px;
 }
 
-.header h1 {
-  text-align: center;
-  flex-grow: 1;
+.titulo h1 {
   font-size: 26px;
   color: #004080;
-  margin: 0;
 }
 
-.info {
-  font-size: 16px;
+.subtitulo {
+  font-size: 15px;
+  color: #888;
+  margin-top: 4px;
+}
+
+/* Información del estudiante */
+.info-estudiante {
   margin-bottom: 30px;
-  line-height: 1.6;
+  line-height: 1.8;
 }
 
-.info strong, .label {
-  color: #000;
-  font-weight: bold;
-}
-
-table {
+/* Tabla */
+.tabla-contenido table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 20px;
-  font-size: 16px;
+  margin-bottom: 30px;
 }
 
-th, td {
-  border: 1px solid #bbb;
-  padding: 12px;
+.tabla-contenido th, .tabla-contenido td {
+  padding: 14px;
+  border: 1px solid #d6d6d6;
   text-align: left;
+  vertical-align: top;
 }
 
-th {
+.tabla-contenido th {
   background-color: #004080;
   color: white;
-  font-size: 17px;
+  font-weight: 600;
 }
 
-tr:nth-child(even) {
-  background-color: #f0f8ff;
+/* Observaciones adicionales */
+.adicionales {
+  margin-bottom: 40px;
 }
 
-tr:nth-child(odd) {
-  background-color: #ffffff;
+.adicionales h3 {
+  color: #004080;
+  margin-bottom: 10px;
 }
 
-.footer {
-  margin-top: 50px;
-  font-size: 15px;
-  color: #555;
-  text-align: center;
+.campo {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 6px;
+  min-height: 80px;
 }
 
-.signatures {
-  margin-top: 60px;
+/* Firmas */
+.firmas {
   display: flex;
   justify-content: space-between;
-  font-size: 16px;
+  margin-bottom: 40px;
 }
 
-.signature-block {
+.firma {
   width: 45%;
   text-align: center;
 }
 
-.signature-line {
-  border-top: 1px solid #000;
-  margin-top: 60px;
-  padding-top: 5px;
+.linea-firma {
+  border-top: 1px solid #555;
+  margin: 50px 0 10px;
 }
 
-.observaciones-adicionales {
-  margin-top: 40px;
-  font-size: 16px;
-}
-
-.observaciones-adicionales .label {
-  display: block;
-  margin-bottom: 10px;
-}
-
-.observaciones-adicionales .campo {
-  border: 1px solid #bbb;
-  background-color: #fff;
-  padding: 15px;
-  min-height: 80px;
-}
-
-.print-button {
-  margin-top: 30px;
+/* Pie de página */
+.pie {
   text-align: center;
+  color: #666;
+  font-size: 14px;
+  line-height: 1.6;
+  border-top: 1px solid #ccc;
+  padding-top: 20px;
 }
 
-.print-button button {
+/* Botón imprimir */
+.boton-imprimir {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.boton-imprimir button {
   background-color: #004080;
   color: white;
   border: none;
-  padding: 12px 24px;
+  padding: 12px 30px;
   font-size: 16px;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
+  transition: background 0.3s ease;
 }
 
-.print-button button:hover {
+.boton-imprimir button:hover {
   background-color: #003060;
+}
+
+/* Responsivo para impresión */
+@media print {
+  .boton-imprimir {
+    display: none;
+  }
+
+  body {
+    background-color: white;
+    padding: 0;
+  }
+
+  .contenedor {
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+  }
 }
