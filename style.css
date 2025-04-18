@@ -55,7 +55,7 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Tabla general */
+/* Tabla con bordes visibles */
 .tabla-datos {
   width: 100%;
   border-collapse: collapse;
@@ -65,7 +65,7 @@ a:hover {
 
 .tabla-datos th,
 .tabla-datos td {
-  border: 1px solid #ddd;
+  border: 1px solid #444; /* Borde más visible */
   padding: 0.75rem;
   text-align: left;
   vertical-align: top;
