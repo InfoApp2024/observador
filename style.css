@@ -1,86 +1,158 @@
-/* Fuente sugerida para buena lectura */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
 body {
-  font-family: 'Open Sans', sans-serif;
-  background-color: #f4f6f9;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f7fa;
   margin: 0;
   padding: 0;
-  color: #333;
+  color: #2c3e50;
+  line-height: 1.6;
 }
 
 .container {
-  max-width: 960px;
-  margin: auto;
+  max-width: 1100px;
+  margin: 2rem auto;
   padding: 2rem;
   background-color: #fff;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
 
 .header {
-  text-align: center;
-  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid #3498db;
 }
 
 .logo {
-  width: 120px;
-  margin-bottom: 1rem;
+  width: 100px;
+  height: auto;
+  margin-right: 1.5rem;
 }
 
 h1 {
-  font-size: 2rem;
-  color: #0a3d62;
+  font-size: 2.2rem;
+  color: #2c3e50;
   margin: 0;
+  font-weight: 700;
 }
 
-h2 {
-  font-size: 1.5rem;
-  color: #0a3d62;
-  margin-top: 2rem;
-  border-bottom: 2px solid #0a3d62;
-  padding-bottom: 0.5rem;
+section {
+  margin-bottom: 2.5rem;
 }
 
-p {
-  margin: 0.5rem 0;
+.section-title {
+  background-color: #3498db;
+  color: white;
+  padding: 0.8rem 1.2rem;
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  border-radius: 5px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid #ddd;
+}
+
+table th, table td {
+  border: 1px solid #ddd;
+  padding: 0.9rem;
+  text-align: left;
+}
+
+table th {
+  background-color: #f2f6fa;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+table tr:nth-child(even) {
+  background-color: #f9f9f9;
 }
 
 a {
-  color: #0066cc;
+  color: #3498db;
   text-decoration: none;
+  font-weight: 500;
 }
 
 a:hover {
   text-decoration: underline;
 }
 
-/* Tabla con bordes visibles */
-.tabla-datos {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 1rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-}
-
-.tabla-datos th,
-.tabla-datos td {
-  border: 1px solid #444; /* Borde más visible */
-  padding: 0.75rem;
-  text-align: left;
-  vertical-align: top;
-  font-size: 0.95rem;
-}
-
-.tabla-datos th {
-  background-color: #0a3d62;
-  color: white;
+.info-label {
   font-weight: 600;
+  color: #2c3e50;
 }
 
-.firma-tabla {
-  max-width: 100px;
+.valor-dato {
+  padding-left: 10px;
+}
+
+/* Estilos para la sección de firmas */
+.contenedor-firmas {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2rem;
+}
+
+.firma-box {
+  text-align: center;
+  width: 45%;
+  max-width: 200px;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.firma-imagen {
+  width: 100%;
+  max-width: 150px;
   height: auto;
-  display: block;
-  margin: auto;
+  margin-bottom: 0.5rem;
+}
+
+.firma-texto {
+  margin: 0.5rem 0 0;
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+  
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .logo {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+  
+  table th, table td {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+  
+  .contenedor-firmas {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .firma-box {
+    width: 80%;
+    margin-bottom: 1.5rem;
+  }
 }
